@@ -1,0 +1,24 @@
+{
+    "name": "bes/mobiledetect-twig-extension",
+    "description": "MobileDetect-integration for Twig",
+    "keywords": ["mobile", "mobile detect", "mobile detection", "twig extension", "twig mobile", "twig mobile extension"],
+    "homepage": "https://github.com/bes89/mobiledetect-twig-extension",
+    "type": "twig-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Besnik Brahimi",
+            "email": "besnik.br@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "twig/twig": ">=1.12",
+        "mobiledetect/mobiledetectlib": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Bes": "src/"
+        }
+    }
+}
