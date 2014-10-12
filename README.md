@@ -15,16 +15,14 @@ Installation
 And register the extension:
 
 
-Twig standalone
-+++++++++++++++
+**Twig standalone**
 
 ```php
     $twig->addExtension(new Bes\Twig\Extension\MobileDetectExtension());
 ```
 
 
-Silex
-+++++
+**Silex**
 
 Yay, you don't need a ServiceProvider for it!
 
@@ -40,8 +38,7 @@ Add the following code after registering TwigServiceProvider:
 ... and you are done!
 
 
-Symfony2
-++++++++
+**Symfony2**
 
 Yay, you don't need a Bundle for it!
 
