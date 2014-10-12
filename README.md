@@ -51,7 +51,7 @@ globally in `app/config/config.yml`:
         twig.mobile_detect_extension:
             class: Bes\Twig\Extension\MobileDetectExtension
             tags:
-                - { name: twig.extension }```
+                - { name: twig.extension }
 ```
 
 ... and you are done!
