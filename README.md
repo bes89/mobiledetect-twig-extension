@@ -29,7 +29,7 @@ Yay, you don't need a ServiceProvider for it!
 Add the following code after registering TwigServiceProvider:
 
 ```php
-    $app['twig'] = $app->share($app->extend('twig', function($twig, $app) {
+    $app['twig'] = $app->share($app->extend('twig', function($twig) {
         /* @var $twig \Twig_Environment */
         $twig->addExtension(new Bes\Twig\Extension\MobileDetectExtension);
         return $twig;
@@ -42,7 +42,8 @@ Add the following code after registering TwigServiceProvider:
 
 Yay, you don't need a Bundle for it!
 
-Add the following code to one of your services.yml, e.g. `src/<vendor>/<your>Bundle/Resources/config/services.yml` or
+Add the following code to one of your services.yml, e.g.
+`src/<vendor>/<your>Bundle/Resources/config/services.yml` or
 globally in `app/config/config.yml`:
 
 ```yaml
@@ -51,6 +52,7 @@ globally in `app/config/config.yml`:
             class: Bes\Twig\Extension\MobileDetectExtension
             tags:
                 - { name: twig.extension }```
+```
 
 ... and you are done!
 
