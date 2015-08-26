@@ -31,7 +31,7 @@ class MobileDetectExtension extends \Twig_Extension
         foreach ($this->getAvailableDevices() as $device => $fixedName) {
             $methodName = 'is'.$device;
             $twigFunctionName = 'is_'.$fixedName;
-            $functions[$twigFunctionName] = new \Twig_Function_Method($this, 'is'.$methodName);
+            $functions[$twigFunctionName] = new \Twig_Function_Method($this, $methodName);
         }
 
         return $functions;
