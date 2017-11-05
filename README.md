@@ -9,7 +9,7 @@ Installation
 
 
 ```bash
-    php composer.phar require "bes/mobiledetect-twig-extension:v1.0"
+composer require "bes/mobiledetect-twig-extension:1.*"
 ```
 
 And register the extension:
