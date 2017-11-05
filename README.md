@@ -38,7 +38,7 @@ Add the following code after registering TwigServiceProvider:
 ... and you are done!
 
 
-**Symfony2**
+**Symfony3**
 
 Yay, you don't need a Bundle for it!
 
