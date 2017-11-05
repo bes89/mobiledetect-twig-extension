@@ -23,15 +23,15 @@ class MobileDetectExtension extends \Twig_Extension
     public function getFunctions()
     {
         $functions = array(
-            'get_available_devices' => new \Twig_Function_Method($this, 'getAvailableDevices'),
-            'is_mobile' => new \Twig_Function_Method($this, 'isMobile'),
-            'is_tablet' => new \Twig_Function_Method($this, 'isTablet'),
+            new \Twig_SimpleFunction('get_available_devices', array($this, 'getAvailableDevices')),
+            new \Twig_SimpleFunction('is_mobile', array($this, 'isMobile')),
+            new \Twig_SimpleFunction('is_tablet', array($this, 'isTablet'))
         );
 
         foreach ($this->getAvailableDevices() as $device => $fixedName) {
             $methodName = 'is'.$device;
             $twigFunctionName = 'is_'.$fixedName;
-            $functions[$twigFunctionName] = new \Twig_Function_Method($this, $methodName);
+            $functions[] = new \Twig_SimpleFunction($twigFunctionName, array($this, $methodName));
         }
 
         return $functions;
