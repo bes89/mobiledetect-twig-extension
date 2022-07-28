@@ -3,7 +3,7 @@
 namespace Bes\Twig\Extension;
 
 
-class MobileDetectExtension extends \Twig_Extension
+class MobileDetectExtension extends \Twig\Extension\AbstractExtension
 {
     protected $detector;
 
